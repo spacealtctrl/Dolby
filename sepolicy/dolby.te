@@ -28,8 +28,5 @@ allow priv_app hal_audio_default:binder { call transfer };
 allow untrusted_app hal_dms_hwservice:hwservice_manager find;
 allow untrusted_app hal_audio_default:binder call;
 
-# Allow hal_audio_default to find default_android_hwservice (fallback)
-allow hal_audio_default default_android_hwservice:hwservice_manager find;
-
 # Init permissions for creating data directory
 allow init vendor_data_file:dir { create setattr };
