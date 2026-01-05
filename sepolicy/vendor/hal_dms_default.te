@@ -8,3 +8,7 @@ allow hal_dms_default vendor_data_file:file create_file_perms;
 allow hal_dms_default vendor_data_file:dir rw_dir_perms;
 
 binder_call(hal_dms_default, platform_app)
+
+# Allow the Dolby HAL to manage its own data files
+allow hal_dms_default vendor_dolby_lib_data_file:dir create_dir_perms;
+allow hal_dms_default vendor_dolby_lib_data_file:file create_file_perms;
