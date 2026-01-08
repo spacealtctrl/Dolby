@@ -74,7 +74,7 @@ LOCAL_MODULE := vendor.dolby.hardware.dms@2.0-service.rc
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
-LOCAL_SRC_FILES := unused/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+LOCAL_SRC_FILES := vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 include $(BUILD_PREBUILT)
 
 # HAL VINTF Manifest
@@ -265,13 +265,13 @@ LOCAL_SRC_FILES := etc/init.dolby.rc
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
 include $(BUILD_PREBUILT)
 
-# Media Codecs configuration required for Dolby audio support (from upstream Magisk module unused folder)
+# Media Codecs configuration required for Dolby audio support
 include $(CLEAR_VARS)
 LOCAL_MODULE := media_codecs_dolby
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
-LOCAL_SRC_FILES := unused/vendor/etc/media_codecs.xml
+LOCAL_SRC_FILES := vendor/etc/media_codecs.xml
 include $(BUILD_PREBUILT)
 
 # Dolby App Whitelist

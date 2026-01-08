@@ -1299,26 +1299,26 @@
     <device_id id="speaker_portrait" endpoint_port="internal_speaker"/>
     <data>
       <audio-optimizer-bands>
-        <band_optimizer frequency="47" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="141" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="234" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="328" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="469" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="656" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="844" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="1031" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="1313" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="1688" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="2250" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="3000" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="3750" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="4688" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="5813" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="7125" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="9000" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="11250" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="13875" gain_left="0" gain_right="0"/>
-        <band_optimizer frequency="19688" gain_left="0" gain_right="0"/>
+        <band_optimizer frequency="47" gain_left="96" gain_right="96"/>
+        <band_optimizer frequency="141" gain_left="176" gain_right="176"/>
+        <band_optimizer frequency="234" gain_left="176" gain_right="176"/>
+        <band_optimizer frequency="328" gain_left="128" gain_right="128"/>
+        <band_optimizer frequency="469" gain_left="105" gain_right="105"/>
+        <band_optimizer frequency="656" gain_left="83" gain_right="83"/>
+        <band_optimizer frequency="844" gain_left="83" gain_right="83"/>
+        <band_optimizer frequency="1031" gain_left="94" gain_right="94"/>
+        <band_optimizer frequency="1313" gain_left="111" gain_right="111"/>
+        <band_optimizer frequency="1688" gain_left="97" gain_right="97"/>
+        <band_optimizer frequency="2250" gain_left="96" gain_right="96"/>
+        <band_optimizer frequency="3000" gain_left="97" gain_right="97"/>
+        <band_optimizer frequency="3750" gain_left="100" gain_right="100"/>
+        <band_optimizer frequency="4688" gain_left="94" gain_right="94"/>
+        <band_optimizer frequency="5813" gain_left="98" gain_right="98"/>
+        <band_optimizer frequency="7125" gain_left="100" gain_right="100"/>
+        <band_optimizer frequency="9000" gain_left="89" gain_right="89"/>
+        <band_optimizer frequency="11250" gain_left="92" gain_right="92"/>
+        <band_optimizer frequency="13875" gain_left="94" gain_right="94"/>
+        <band_optimizer frequency="19688" gain_left="90" gain_right="90"/>
       </audio-optimizer-bands>
       <regulator-tuning>
         <band_regulator frequency="47" threshold_low="-192" threshold_high="0" isolated_band="false"/>
@@ -1348,8 +1348,8 @@
       <bass-enhancer-cutoff-frequency value="200"/>
       <bass-enhancer-width value="16"/>
       <bass-extraction-cutoff-frequency value="200"/>
-      <complex-equalizer-tuning-left value="0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0"/>
-      <complex-equalizer-tuning-right value="0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0,32767,0"/>
+      <complex-equalizer-tuning-left value="0,13106,0,12842,299,12774,1357,12774,1357,12476,-2777,12963,1691,12619,-259,13249,-624,12739,-66,12509,-940,12844,-185,12844,-185,12819,-828,12819,-828,11737,-430,13709,-1199,10727,-1443,11579,-2250,12820,-2725,12179,-2588,12770,-2948,12717,-3170,12239,-4077,11601,-5386,11015,-6602,10764,-6755,10883,-7088,9944,-7493,9383,-8690,8979,-8824,9385,-10064,8522,-10102,7887,-9321,8938,-9585,8491,-9106,7493,-9944,6814,-11022,7292,-11670,7105,-11465,6927,-11016,6354,-11463,4865,-11461,3432,-11969,1446,-13181,-913,-10445,-1986,-6929,-2454,-6076,-4335,-8882,-5214,-9525,-6116,-10460,-6331,-11966,-5633,-13271,-5379,-14779,-5974,-17349,-6480,-19944,-8837,-21874,-13106,-22701,-17271,-20582,-19578,-16428,-16488,-10707,-12919,-7763,-10559,-6598,-9019,-5884,-7509,-5450,-6415,-5156,-5691,-4756,-5218,-4382,-4621,-4306,-3677,-4565,-2695,-4840,-2027,-5112,-1690,-5689,-1668,-6893,518,-10905,12352,-15139,28182,-7457,32767,0"/>
+      <complex-equalizer-tuning-right value="0,12846,0,12842,-299,12774,-1357,12774,-1357,12602,2804,12540,-1635,13045,272,12479,588,12971,69,13043,979,12844,184,12844,184,12819,828,12819,828,14040,515,14990,1575,11082,1491,12862,2581,12820,2725,12865,2500,12179,2588,12717,3170,12156,4049,11681,5423,11350,6553,10960,6878,10442,6781,10554,8056,9303,8616,8979,8825,9021,9898,8598,9891,8159,9642,8044,8627,8770,9740,7347,10056,6833,11051,6598,10559,6970,11246,6872,10930,6881,11918,4865,11461,3432,11969,1396,12720,-1301,12383,-4023,13160,-3328,7842,-3754,7692,-4864,8886,-6407,10957,-7366,13923,-7169,16890,-6649,17407,-6187,17809,-5808,16005,-6640,14987,-8431,14018,-11117,12936,-13897,11336,-14830,9441,-14089,8246,-12403,7496,-10771,7027,-9440,6852,-8195,6587,-7298,6098,-6972,5855,-6733,6273,-5748,7137,-4295,7713,-3175,8008,-2565,8633,-2453,10133,641,13502,10559,12941,16810,4448,16909,0"/>
       <height-filter-mode value="1"/>
       <speaker-virtualizer-mode value="2"/>
       <advanced-speaker-virtualizer-start-bin value="3"/>
@@ -1387,7 +1387,7 @@
       <audio-optimizer-enable value="true"/>
       <volume-leveler-compressor-enable value="false"/>
       <bass-extraction-enable value="false"/>
-      <complex-equalizer-enable value="false"/>
+      <complex-equalizer-enable value="true"/>
       <regulator-enable value="true"/>
       <regulator-speaker-dist-enable value="true"/>
       <regulator-sibilance-suppress-enable value="false"/>
