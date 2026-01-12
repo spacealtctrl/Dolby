@@ -35,7 +35,11 @@ PRODUCT_PACKAGES += \
     libswdap \
     libswgamedap \
     libswvqe \
-    init.dolby.rc
+    init.dolby.rc \
+    SoundEnhancement \
+    com.sony.threesixtyra.audiofx \
+    libavenhancements \
+    com.sonyericsson.soundenhancement.xml
 
 PRODUCT_COPY_FILES += \
     vendor/dolby/system/vendor/etc/audio/sku_kalama/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_effects.xml \

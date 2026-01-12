@@ -354,3 +354,50 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/dolby
 LOCAL_SRC_FILES := system/vendor/etc/dolby/dax-applist.xml
 include $(BUILD_PREBUILT)
 
+# Sony SoundEnhancement Stack (Modern replacement for MusicFX UI)
+# SoundEnhancement app (System_Ext privileged)
+include $(CLEAR_VARS)
+LOCAL_MODULE := SoundEnhancement
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_SRC_FILES := vendor/dolby/SoundEnhancement/SoundEnhancement.apk
+LOCAL_DEX_PREOPT := false
+include $(BUILD_PREBUILT)
+
+# Sony 360RA AudioFX Framework JAR (Product partition)
+include $(CLEAR_VARS)
+LOCAL_MODULE := com.sony.threesixtyra.audiofx
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .jar
+LOCAL_PRODUCT_MODULE := true
+LOCAL_SRC_FILES := vendor/dolby/framework/com.sony.threesixtyra.audiofx.jar
+include $(BUILD_PREBUILT)
+
+# Sony AV Enhancements native library (System_Ext)
+include $(CLEAR_VARS)
+LOCAL_MODULE := libavenhancements
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT)/lib64
+LOCAL_SRC_FILES := vendor/dolby/lib64/libavenhancements.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+# Sony SoundEnhancement permissions (System_Ext)
+include $(CLEAR_VARS)
+LOCAL_MODULE := com.sonyericsson.soundenhancement.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
+LOCAL_SRC_FILES := vendor/dolby/etc/permissions/com.sonyericsson.soundenhancement.xml
+include $(BUILD_PREBUILT)
+
