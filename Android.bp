@@ -10,7 +10,7 @@ android_app_import {
     certificate: "platform",
     privileged: true,
     overrides: ["AudioFX", "MusicFX"],
-    privapp_allowlist: "privapp-permissions-musicfx.xml",
+    required: ["privapp-permissions-musicfx"],
 }
 
 // Privapp permissions for MusicFX
@@ -18,4 +18,5 @@ prebuilt_etc {
     name: "privapp-permissions-musicfx",
     src: "MusicFX/permissions/privapp-permissions-musicfx.xml",
     sub_dir: "permissions",
+    filename_from_src: true,
 }
