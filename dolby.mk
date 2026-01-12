@@ -1,7 +1,6 @@
 # Dolby Sound
 PRODUCT_PACKAGES += \
     MusicFX \
-    privapp-permissions-musicfx \
     DolbySound \
     daxService \
     default-com.dolby.daxservice.xml \
@@ -33,7 +32,8 @@ PRODUCT_PACKAGES += \
     init.dolby.rc
 
 PRODUCT_COPY_FILES += \
-    vendor/dolby/system/vendor/etc/audio/sku_kalama/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_effects.xml
+    vendor/dolby/system/vendor/etc/audio/sku_kalama/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_effects.xml \
+    vendor/dolby/MusicFX/permissions/privapp-permissions-musicfx.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-musicfx.xml
 
 BOARD_VENDOR_SEPOLICY_DIRS += vendor/dolby/sepolicy
 
