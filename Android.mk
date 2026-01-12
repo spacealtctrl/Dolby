@@ -1,8 +1,8 @@
 LOCAL_PATH := $(call my-dir)
 
-# MusicFX app
+# MusicFX app (vendor custom - replaces AudioFX and AOSP MusicFX)
 include $(CLEAR_VARS)
-LOCAL_MODULE := MusicFX
+LOCAL_MODULE := SonyMusicFX
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_BUILT_MODULE_STEM := package.apk

@@ -1,6 +1,6 @@
 # Dolby Sound
 PRODUCT_PACKAGES += \
-    MusicFX \
+    SonyMusicFX \
     DolbySound \
     daxService \
     default-com.dolby.daxservice.xml \
