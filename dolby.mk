@@ -1,5 +1,7 @@
 # Dolby Sound
 PRODUCT_PACKAGES += \
+    MusicFX \
+    privapp-permissions-musicfx \
     DolbySound \
     daxService \
     default-com.dolby.daxservice.xml \

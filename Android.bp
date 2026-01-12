@@ -1,0 +1,21 @@
+//
+// Copyright (C) 2024 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// MusicFX app - replaces both AudioFX and AOSP MusicFX
+android_app_import {
+    name: "MusicFX",
+    apk: "MusicFX/MusicFX.apk",
+    certificate: "platform",
+    privileged: true,
+    overrides: ["AudioFX", "MusicFX"],
+    privapp_allowlist: "privapp-permissions-musicfx.xml",
+}
+
+// Privapp permissions for MusicFX
+prebuilt_etc {
+    name: "privapp-permissions-musicfx",
+    src: "MusicFX/permissions/privapp-permissions-musicfx.xml",
+    sub_dir: "permissions",
+}
