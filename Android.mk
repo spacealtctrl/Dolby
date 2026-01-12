@@ -1,16 +1,17 @@
 LOCAL_PATH := $(call my-dir)
 
-# MusicFX app (vendor custom - replaces AudioFX and AOSP MusicFX)
+# MusicFX app (Android 16 version with Sony backend)
 include $(CLEAR_VARS)
-LOCAL_MODULE := SonyMusicFX
+LOCAL_MODULE := MusicFX
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_BUILT_MODULE_STEM := package.apk
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_PRIVILEGED_MODULE := true
+LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_SRC_FILES := MusicFX/MusicFX.apk
-LOCAL_OVERRIDES_PACKAGES := AudioFX MusicFX
+LOCAL_OVERRIDES_PACKAGES := AudioFX
 LOCAL_ENFORCE_USES_LIBRARIES := false
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
@@ -352,21 +353,6 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/dolby
 LOCAL_SRC_FILES := system/vendor/etc/dolby/dax-applist.xml
-include $(BUILD_PREBUILT)
-
-# Sony SoundEnhancement Stack (Modern replacement for MusicFX UI)
-# SoundEnhancement app (System_Ext privileged)
-include $(CLEAR_VARS)
-LOCAL_MODULE := SoundEnhancement
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_TAGS := optional
-LOCAL_BUILT_MODULE_STEM := package.apk
-LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_PRIVILEGED_MODULE := true
-LOCAL_SYSTEM_EXT_MODULE := true
-LOCAL_SRC_FILES := vendor/dolby/SoundEnhancement/SoundEnhancement.apk
-LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 # Sony 360RA AudioFX Framework JAR (Product partition)
