@@ -1,6 +1,6 @@
 # Dolby Sound
 PRODUCT_PACKAGES += \
-    SonyMusicFX \
+    MusicFX \
     DolbySound \
     com.sonymobile.somcmediarouter \
     SemcAudioEffect \
@@ -36,7 +36,6 @@ PRODUCT_PACKAGES += \
     libswgamedap \
     libswvqe \
     init.dolby.rc \
-    SoundEnhancement \
     com.sony.threesixtyra.audiofx \
     libavenhancements \
     com.sonyericsson.soundenhancement.xml
