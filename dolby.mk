@@ -2,12 +2,6 @@
 PRODUCT_PACKAGES += \
     SonyMusicFX \
     DolbySound \
-    com.sonymobile.somcmediarouter \
-    SemcAudioEffect \
-    libsonyeffect \
-    libsonypostprocbundle \
-    libsomc_audio \
-    privapp-sony-framework.xml \
     daxService \
     default-com.dolby.daxservice.xml \
     privapp-com.dolby.daxservice.xml \
@@ -38,7 +32,18 @@ PRODUCT_PACKAGES += \
     init.dolby.rc \
     com.sony.threesixtyra.audiofx \
     libavenhancements \
-    com.sonyericsson.soundenhancement.xml
+    libznrwrapper \
+    libmmparserextractor \
+    com.sony.360ra.xml \
+    com.sony.threesixtyra.audiofx.xml \
+    com.sonyericsson.soundenhancement.xml \
+    windnoise_reduction.data \
+    windnoise_reduction_back.data \
+    windnoise_reduction_stat.data \
+    media_codecs_sony_c2_audio.xml \
+    dsx_param_file.bin \
+    alc.speaker.bin \
+    XTC_speaker_coef.hki
 
 PRODUCT_COPY_FILES += \
     vendor/dolby/system/vendor/etc/audio/sku_kalama/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_effects.xml \
@@ -56,3 +61,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.dolby.music_stream=false \
     vendor.audio.dolby.ds2.enabled=false \
     vendor.audio.dolby.ds2.hardbypass=false
+
+# Sony Audio & DSEE Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sony.dseehx.supported=true \
+    ro.sony.dsx.supported=true \
+    persist.vendor.audio.sony.dseehx.enable=1 \
+    ro.somc.dseehx.supported=true

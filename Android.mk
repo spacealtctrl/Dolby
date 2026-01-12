@@ -230,7 +230,7 @@ LOCAL_SRC_FILES := system/vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
-# Soundfx libs
+# Soundfx libs (Dolby)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libdlbvol
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -280,62 +280,8 @@ LOCAL_SRC_FILES := etc/init.dolby.rc
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc/init
 include $(BUILD_PREBUILT)
 
-# Sony Framework JARs for MusicFX
-include $(CLEAR_VARS)
-LOCAL_MODULE := com.sonymobile.somcmediarouter
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .jar
-LOCAL_SRC_FILES := framework/com.sonymobile.somcmediarouter.jar
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := SemcAudioEffect
-LOCAL_MODULE_CLASS := JAVA_LIBRARIES
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .jar
-LOCAL_SRC_FILES := framework/SemcAudioEffect.jar
-include $(BUILD_PREBUILT)
-
-# Sony Native Libraries for MusicFX
-include $(CLEAR_VARS)
-LOCAL_MODULE := libsonyeffect
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM)/lib64
-LOCAL_SRC_FILES := MusicFX/lib64/libsonyeffect.so
-LOCAL_CHECK_ELF_FILES := false
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libsonypostprocbundle
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM)/lib64
-LOCAL_SRC_FILES := MusicFX/lib64/libsonypostprocbundle.so
-LOCAL_CHECK_ELF_FILES := false
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libsomc_audio
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM)/lib64
-LOCAL_SRC_FILES := MusicFX/lib64/libsomc_audio.so
-LOCAL_CHECK_ELF_FILES := false
-include $(BUILD_PREBUILT)
-
-# Sony Framework Permissions
-include $(CLEAR_VARS)
-LOCAL_MODULE := privapp-sony-framework.xml
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/permissions
-LOCAL_SRC_FILES := etc/permissions/privapp-sony-framework.xml
-include $(BUILD_PREBUILT)
+# Modern Sony Stack - Legacy framework JARs removed (not available)
+# Using Modern Stack: com.sony.threesixtyra.audiofx, libavenhancements, etc.
 
 # Media Codecs configuration required for Dolby audio support
 include $(CLEAR_VARS)
@@ -377,6 +323,48 @@ LOCAL_SRC_FILES := vendor/dolby/lib64/libavenhancements.so
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
+# Sony SoundFX Wrappers (Vendor)
+include $(CLEAR_VARS)
+LOCAL_MODULE := libznrwrapper
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib64/soundfx
+LOCAL_SRC_FILES := vendor/dolby/lib64/soundfx/libznrwrapper.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+# Sony System_Ext Helper Libraries
+include $(CLEAR_VARS)
+LOCAL_MODULE := libmmparserextractor
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT)/lib64
+LOCAL_SRC_FILES := vendor/dolby/lib64/libmmparserextractor.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
+# Sony 360RA Permissions (System_Ext)
+include $(CLEAR_VARS)
+LOCAL_MODULE := com.sony.360ra.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
+LOCAL_SRC_FILES := vendor/dolby/etc/permissions/com.sony.360ra.xml
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := com.sony.threesixtyra.audiofx.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_SYSTEM_EXT_MODULE := true
+LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
+LOCAL_SRC_FILES := vendor/dolby/etc/permissions/com.sony.threesixtyra.audiofx.xml
+include $(BUILD_PREBUILT)
+
 # Sony SoundEnhancement permissions (System_Ext)
 include $(CLEAR_VARS)
 LOCAL_MODULE := com.sonyericsson.soundenhancement.xml
@@ -387,3 +375,61 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT_ETC)/permissions
 LOCAL_SRC_FILES := vendor/dolby/etc/permissions/com.sonyericsson.soundenhancement.xml
 include $(BUILD_PREBUILT)
 
+# Sony ZNR (Noise Reduction) Data Files (Vendor)
+include $(CLEAR_VARS)
+LOCAL_MODULE := windnoise_reduction.data
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := vendor/dolby/etc/windnoise_reduction.data
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := windnoise_reduction_back.data
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := vendor/dolby/etc/windnoise_reduction_back.data
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := windnoise_reduction_stat.data
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := vendor/dolby/etc/windnoise_reduction_stat.data
+include $(BUILD_PREBUILT)
+
+# Sony Media Codec XML (Vendor)
+include $(CLEAR_VARS)
+LOCAL_MODULE := media_codecs_sony_c2_audio.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := vendor/dolby/etc/media_codecs_sony_c2_audio.xml
+include $(BUILD_PREBUILT)
+
+# Sony DSEE/DSX Audio Parameter Files (Vendor)
+include $(CLEAR_VARS)
+LOCAL_MODULE := dsx_param_file.bin
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := vendor/dolby/etc/dsx_param_file.bin
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := alc.speaker.bin
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := vendor/dolby/etc/alc.speaker.bin
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := XTC_speaker_coef.hki
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/etc
+LOCAL_SRC_FILES := vendor/dolby/etc/XTC_speaker_coef.hki
+include $(BUILD_PREBUILT)
