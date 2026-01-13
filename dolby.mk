@@ -43,7 +43,6 @@ PRODUCT_PACKAGES += \
     media_codecs_sony_c2_audio.xml \
     dsx_param_file.bin \
     alc.speaker.bin \
-    XTC_speaker_coef.hki \
     ThreeSixtyRASettings \
     ThreeSixtyRASystem \
     ThreeSixtyRASystem-pdx234-Overlay \
@@ -52,7 +51,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     system/vendor/etc/audio/sku_kalama/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_effects.xml \
     MusicFX/permissions/privapp-permissions-musicfx.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-musicfx.xml \
-    etc/sysconfig/musicfx_hidden.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/musicfx_hidden.xml
+    etc/sysconfig/musicfx_hidden.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/musicfx_hidden.xml \
+    vendor/dolby/etc/XTC_speaker_coef.hki:$(TARGET_COPY_OUT_VENDOR)/etc/XTC_speaker_coef.hki
 
 BOARD_VENDOR_SEPOLICY_DIRS += vendor/dolby/sepolicy
 
