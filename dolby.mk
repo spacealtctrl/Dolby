@@ -1,7 +1,4 @@
 # Dolby Sound
-# Include Android.mk to define modules (explicit include to ensure correct path resolution)
-include $(call my-dir)/Android.mk
-
 PRODUCT_PACKAGES += \
     SonyMusicFX \
     DolbySound \
