@@ -57,8 +57,8 @@ PRODUCT_PACKAGES += \
     libtsrupmix
 
 # 360RA Boot JAR
-PRODUCT_BOOT_JARS += \
-    com.sony.threesixtyra.audiofx
+# PRODUCT_BOOT_JARS += \
+#     com.sony.threesixtyra.audiofx
 
 # 360RA system properties
 PRODUCT_PROPERTY_OVERRIDES += \
